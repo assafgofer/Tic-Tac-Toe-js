@@ -1,0 +1,51 @@
+:root {
+	background:mistyRose;
+	--cell-size: 100px;
+
+	--color: #81c3fd; /* for hover */
+	--color-set: #0275d8; /* when set */
+	--l: 10px; /* X line-width */
+}
+
+body {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.board {
+	display: grid;
+	justify-content: space-around;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+	grid-template-columns: repeat(3, auto)
+}
+
+.cell {
+	background: snow;
+	width: var(--cell-size);
+	height: var(--cell-size);
+	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+	font-size: 3rem;
+}
+
+.winning-message {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.title {
+	display: flex;
+	justify-content: center;
+}
