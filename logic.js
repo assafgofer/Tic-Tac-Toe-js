@@ -40,7 +40,6 @@ function checkWinner() {
     WINNING_COMBINATION.forEach(comb => {
         if ((cells[comb[0]].innerHTML == turn) && (cells[comb[1]].innerHTML == turn)
             && (cells[comb[2]].innerHTML == turn)) {
-                console.log('inside checkWinner');
                 hasWon = true;
         }
     })
@@ -76,7 +75,6 @@ function handleCellClick(e) {
     e.target.style.color = '';
     e.target.innerHTML = turn;
     if (checkWinner()) {
-        console.log('we have a winner!');
         winningMessage.innerHTML = `${turn} Has Won`;
     } else if (isBoardFull()) {
         winningMessage.innerHTML = `It's a Draw`;
